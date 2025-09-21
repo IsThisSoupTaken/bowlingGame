@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc6tx8660oron"]
+
+[ext_resource type="Script" uid="uid://dmlhjghbnqv1g" path="res://scripts/gutterball_zone.gd" id="1_rion7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jn4i6"]
+size = Vector2(50, 1050)
+
+[node name="GutterballZone" type="Area2D"]
+script = ExtResource("1_rion7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 425)
+shape = SubResource("RectangleShape2D_jn4i6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

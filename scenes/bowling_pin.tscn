@@ -1,0 +1,54 @@
+[gd_scene load_steps=12 format=3 uid="uid://brocifd0c8ouo"]
+
+[ext_resource type="AudioStream" uid="uid://ba0hmvxiwsotu" path="res://assets/sfx/pinstrike1.wav" id="1_8wpns"]
+[ext_resource type="Script" uid="uid://bknbig0u4cwu6" path="res://scripts/pin_sfx.gd" id="1_38sqn"]
+[ext_resource type="Texture2D" uid="uid://bw44l1f15tstg" path="res://assets/bowlingpin_upright_placeholder.png" id="1_yklfw"]
+[ext_resource type="AudioStream" uid="uid://d25jngu1w01v6" path="res://assets/sfx/pinstrike2.wav" id="2_38sqn"]
+[ext_resource type="AudioStream" uid="uid://bfjlrm3pj618c" path="res://assets/sfx/pinstrike3.wav" id="3_cup7n"]
+[ext_resource type="AudioStream" uid="uid://dojxc3w72hbj2" path="res://assets/sfx/pinstrike4.wav" id="4_hw5bh"]
+[ext_resource type="AudioStream" uid="uid://c3umfwmp08d6" path="res://assets/sfx/pinstrike5.wav" id="5_hx8ey"]
+[ext_resource type="AudioStream" uid="uid://dppssirsg3cu3" path="res://assets/sfx/pinstrike6.wav" id="6_ju7tb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j54ii"]
+friction = 0.64
+bounce = 0.32
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j54ii"]
+radius = 3.66667
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_38sqn"]
+random_pitch = 1.1
+streams_count = 6
+stream_0/stream = ExtResource("1_8wpns")
+stream_1/stream = ExtResource("2_38sqn")
+stream_2/stream = ExtResource("3_cup7n")
+stream_3/stream = ExtResource("4_hw5bh")
+stream_4/stream = ExtResource("5_hx8ey")
+stream_5/stream = ExtResource("6_ju7tb")
+
+[node name="BowlingPin" type="RigidBody2D" groups=["Pins"]]
+disable_mode = 2
+mass = 1.5
+physics_material_override = SubResource("PhysicsMaterial_j54ii")
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 11
+linear_damp = 0.5
+angular_damp = 0.5
+script = ExtResource("1_38sqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_j54ii")
+
+[node name="PinSprite" type="Sprite2D" parent="."]
+position = Vector2(-1.14441e-05, 1.90735e-06)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_yklfw")
+
+[node name="PinCollisionSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_38sqn")
+volume_db = -22.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

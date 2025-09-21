@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp3loje6a1kwj"]
+
+[ext_resource type="Script" uid="uid://dabn6hl3kdqr6" path="res://scripts/ball_movement.gd" id="1_4t3fo"]
+[ext_resource type="Texture2D" uid="uid://14m7py0mxddp" path="res://assets/bowlingball_placeholder.png" id="2_4t3fo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o2c6j"]
+friction = 0.1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_abd54"]
+radius = 66.0076
+
+[node name="RigidBody2D" type="RigidBody2D" groups=["Balls"]]
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_o2c6j")
+gravity_scale = 0.0
+linear_damp = 0.005
+angular_damp = 0.2
+script = ExtResource("1_4t3fo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_abd54")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4t3fo")
