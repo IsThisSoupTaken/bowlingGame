@@ -8,14 +8,14 @@ func _ready() -> void:
 	add_start_pins()
 
 func pin_counter():
+	var pin_total = 0
 	for child in get_children():
 		if child.get_child_count() == 1:
-			ScoreVariables.pin_total += 1
+			pin_total += 1
 		else:
 			continue
 	
-	
-	if ScoreVariables.pin_total == 0:
+	if pin_total == 0:
 		all_clear = true
 
 func add_start_pins():

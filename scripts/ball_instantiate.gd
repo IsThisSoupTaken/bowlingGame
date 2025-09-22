@@ -29,3 +29,4 @@ func _on_button_pressed() -> void:
 	if ball_amt == 0 and %ResetTimer.is_stopped() and %SetupTimer.is_stopped():
 		add_ball()
 		ScoreVariables.bowl_count += 1
+		print(ScoreVariables.bowl_count)

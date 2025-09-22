@@ -1,7 +1,5 @@
 extends Node
 
-@onready var pin_total = 0
-
 @onready var pin_struck = false
 
 @onready var score = 0
