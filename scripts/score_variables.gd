@@ -1,5 +1,7 @@
 extends Node
 
+# ...this can't be how singletons work, right?
+
 @onready var pin_struck = false
 
 @onready var score = 0
