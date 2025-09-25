@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://dkc7k4o42ms5u" path="res://assets/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="6_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://b4bc03cryfeof" path="res://assets/bowl_button_pressed.png" id="7_choun"]
 [ext_resource type="Script" uid="uid://cvjhb30xkki2j" path="res://scripts/score_label.gd" id="7_tipki"]
+[ext_resource type="Script" uid="uid://bsc61s5f0yk4j" path="res://scripts/bowl_button.gd" id="8_trceg"]
 [ext_resource type="Script" uid="uid://cxpfkxag78dlm" path="res://scripts/g_ball_label.gd" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://cgliu6uft2e5i" path="res://scenes/StrikeLabel.tscn" id="11_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://r8joo0grensh" path="res://scenes/spare_label.tscn" id="12_eb6dy"]
@@ -26,9 +27,6 @@ size = Vector2(2.5, 1065)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eb6dy"]
 custom_solver_bias = 0.01
 size = Vector2(2.5, 1065)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya4ey"]
-size = Vector2(256, 128)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0wfyh")
@@ -65,6 +63,7 @@ shape = SubResource("SegmentShape2D_tipki")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Gutters"]
 position = Vector2(320, 0)
+constant_linear_velocity = Vector2(-10, 0)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gutters/StaticBody2D2"]
@@ -76,6 +75,7 @@ one_way_collision = true
 [node name="StaticBody2D3" type="StaticBody2D" parent="Gutters"]
 position = Vector2(632, 1065)
 rotation = 3.1415927
+constant_linear_velocity = Vector2(10, 0)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gutters/StaticBody2D3"]
@@ -143,12 +143,6 @@ unique_name_in_owner = true
 position = Vector2(570, 210)
 script = ExtResource("4_tbgi4")
 
-[node name="BowlButton" type="TouchScreenButton" parent="."]
-position = Vector2(34, 1111)
-texture_normal = ExtResource("6_85g3d")
-texture_pressed = ExtResource("7_choun")
-shape = SubResource("RectangleShape2D_ya4ey")
-
 [node name="ResetTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 2.0
@@ -158,6 +152,17 @@ one_shot = true
 unique_name_in_owner = true
 wait_time = 0.1
 one_shot = true
+
+[node name="BowlButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 31.0
+offset_top = 1073.0
+offset_right = 287.0
+offset_bottom = 1201.0
+texture_normal = ExtResource("6_85g3d")
+texture_pressed = ExtResource("7_choun")
+texture_disabled = ExtResource("7_choun")
+script = ExtResource("8_trceg")
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 27.0
@@ -195,7 +200,6 @@ offset_bottom = 642.0
 
 [connection signal="ball_gone" from="." to="PinPositions" method="_on_main_ball_gone"]
 [connection signal="body_exited" from="BallCatcher" to="." method="_on_ball_catcher_body_exited"]
-[connection signal="pressed" from="BowlButton" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="ResetTimer" to="PinPositions" method="_on_reset_timer_timeout"]
 [connection signal="timeout" from="ResetTimer" to="PinPositions/PinPosition1" method="_on_reset_timer_timeout"]
 [connection signal="timeout" from="ResetTimer" to="PinPositions/PinPosition2" method="_on_reset_timer_timeout"]
@@ -207,3 +211,5 @@ offset_bottom = 642.0
 [connection signal="timeout" from="ResetTimer" to="PinPositions/PinPosition8" method="_on_reset_timer_timeout"]
 [connection signal="timeout" from="ResetTimer" to="PinPositions/PinPosition9" method="_on_reset_timer_timeout"]
 [connection signal="timeout" from="ResetTimer" to="PinPositions/PinPosition10" method="_on_reset_timer_timeout"]
+[connection signal="timeout" from="SetupTimer" to="BowlButton" method="_on_setup_timer_timeout"]
+[connection signal="pressed" from="BowlButton" to="." method="_on_button_pressed"]

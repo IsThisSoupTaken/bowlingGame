@@ -7,5 +7,7 @@ extends RigidBody2D
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("Pins") or body.is_in_group("Balls"):
 		pin_sound.play()
+		$PinSprite.frame = 1
+		$Collision2.call_deferred("set_disabled", false)
 		if body.is_in_group("Balls"):
 			ScoreVariables.pin_struck = true
