@@ -1,5 +1,6 @@
 extends Node2D
 
+const CURVE_BUY_COST: int = 10
 
 @onready var ball: PackedScene = preload("res://scenes/bowling_ball.tscn")
 var ball_amt: int = 0
@@ -30,3 +31,14 @@ func _on_button_pressed() -> void:
 		add_ball()
 		ScoreVariables.bowl_count += 1
 		%BowlButton.disabled = true
+
+
+
+func _on_curve_control_button_pressed() -> void:
+	if ScoreVariables.gutterballs < CURVE_BUY_COST:
+		return
+	elif ScoreVariables.gutterballs >= CURVE_BUY_COST:
+		$CurveControl/CurveBuyButton.visible = false
+		$CurveControl/CurveSlider.visible = true
+		ScoreVariables.curve_button_pressed = true
+		ScoreVariables.gutterballs -= CURVE_BUY_COST

@@ -4,11 +4,11 @@
 [ext_resource type="Script" uid="uid://bknbig0u4cwu6" path="res://scripts/pin_sfx.gd" id="1_38sqn"]
 [ext_resource type="AudioStream" uid="uid://d25jngu1w01v6" path="res://assets/sfx/pinstrike2.wav" id="2_38sqn"]
 [ext_resource type="AudioStream" uid="uid://bfjlrm3pj618c" path="res://assets/sfx/pinstrike3.wav" id="3_cup7n"]
-[ext_resource type="Texture2D" uid="uid://dipx56xycsjf8" path="res://assets/bowlingpin_sideview_placeholder.png" id="3_hw5bh"]
 [ext_resource type="AudioStream" uid="uid://dojxc3w72hbj2" path="res://assets/sfx/pinstrike4.wav" id="4_hw5bh"]
 [ext_resource type="AudioStream" uid="uid://c3umfwmp08d6" path="res://assets/sfx/pinstrike5.wav" id="5_hx8ey"]
 [ext_resource type="AudioStream" uid="uid://dppssirsg3cu3" path="res://assets/sfx/pinstrike6.wav" id="6_ju7tb"]
-[ext_resource type="Texture2D" uid="uid://bvod4eo6tmcbx" path="res://assets/bowlingpin_upright_placeholder_alt.png" id="8_cup7n"]
+[ext_resource type="Texture2D" uid="uid://bvod4eo6tmcbx" path="res://assets/images/bowlingpin_upright_placeholder_alt.png" id="8_cup7n"]
+[ext_resource type="Texture2D" uid="uid://dipx56xycsjf8" path="res://assets/images/bowlingpin_sideview_placeholder.png" id="9_cup7n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j54ii"]
 friction = 0.64
@@ -34,7 +34,7 @@ animations = [{
 "texture": ExtResource("8_cup7n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_hw5bh")
+"texture": ExtResource("9_cup7n")
 }],
 "loop": true,
 "name": &"default",
@@ -63,7 +63,7 @@ disabled = true
 [node name="PinCollisionSound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_38sqn")
-volume_db = -22.0
+volume_db = -24.0
 
 [node name="PinSprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.34375, 0.359375)

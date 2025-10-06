@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf6vvwk0e65u6"
-path="res://.godot/imported/bowlingpin_sideview_placeholder_alt_tiny.png-93fcb57a7c6b808d0f8daf8da888da0a.ctex"
+uid="uid://bvod4eo6tmcbx"
+path="res://.godot/imported/bowlingpin_upright_placeholder_alt.png-7b5291cd60bcb33c2e7aa4439e11bd0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bowlingpin_sideview_placeholder_alt_tiny.png"
-dest_files=["res://.godot/imported/bowlingpin_sideview_placeholder_alt_tiny.png-93fcb57a7c6b808d0f8daf8da888da0a.ctex"]
+source_file="res://assets/images/bowlingpin_upright_placeholder_alt.png"
+dest_files=["res://.godot/imported/bowlingpin_upright_placeholder_alt.png-7b5291cd60bcb33c2e7aa4439e11bd0a.ctex"]
 
 [params]
 

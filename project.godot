@@ -39,6 +39,10 @@ Row3=""
 Row4=""
 GutterZone=""
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 Bowl={

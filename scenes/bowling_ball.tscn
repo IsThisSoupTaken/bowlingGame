@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bp3loje6a1kwj"]
 
 [ext_resource type="Script" uid="uid://dabn6hl3kdqr6" path="res://scripts/ball_movement.gd" id="1_4t3fo"]
-[ext_resource type="Texture2D" uid="uid://14m7py0mxddp" path="res://assets/bowlingball_placeholder.png" id="2_4t3fo"]
+[ext_resource type="Texture2D" uid="uid://14m7py0mxddp" path="res://assets/images/bowlingball_placeholder.png" id="2_4t3fo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o2c6j"]
 friction = 0.1

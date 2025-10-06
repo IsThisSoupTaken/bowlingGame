@@ -2,19 +2,19 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://box4a5q2he2o8"
-path="res://.godot/imported/Chango-Regular.ttf-42c5548567256e3d277583c0d7701bf5.fontdata"
+uid="uid://b65gkv67v8lx5"
+path="res://.godot/imported/PixelifySans-VariableFont_wght.ttf-e5e1ab46c22d34095a3cee415ea8e3ad.fontdata"
 
 [deps]
 
-source_file="res://assets/Chango-Regular.ttf"
-dest_files=["res://.godot/imported/Chango-Regular.ttf-42c5548567256e3d277583c0d7701bf5.fontdata"]
+source_file="res://assets/fonts/PixelifySans-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/PixelifySans-VariableFont_wght.ttf-e5e1ab46c22d34095a3cee415ea8e3ad.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
-generate_mipmaps=false
+generate_mipmaps=true
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
@@ -30,7 +30,12 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}

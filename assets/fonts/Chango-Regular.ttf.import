@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://jfumvbwhty41"
-path="res://.godot/imported/Montreal-Bold.ttf-150a33b23c86924e8a852dd7f3435a6e.fontdata"
+uid="uid://box4a5q2he2o8"
+path="res://.godot/imported/Chango-Regular.ttf-5256f959c3d790c722ac5bdde7d35c56.fontdata"
 
 [deps]
 
-source_file="res://assets/Montreal-Bold.ttf"
-dest_files=["res://.godot/imported/Montreal-Bold.ttf-150a33b23c86924e8a852dd7f3435a6e.fontdata"]
+source_file="res://assets/fonts/Chango-Regular.ttf"
+dest_files=["res://.godot/imported/Chango-Regular.ttf-5256f959c3d790c722ac5bdde7d35c56.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true

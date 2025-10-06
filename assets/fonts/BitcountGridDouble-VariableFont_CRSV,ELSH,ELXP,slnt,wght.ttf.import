@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dkc7k4o42ms5u"
-path="res://.godot/imported/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf-70d650436370324a8316ff076ebea549.fontdata"
+path="res://.godot/imported/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf-11d6ec85c395558fd622d122d6299777.fontdata"
 
 [deps]
 
-source_file="res://assets/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf"
-dest_files=["res://.godot/imported/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf-70d650436370324a8316ff076ebea549.fontdata"]
+source_file="res://assets/fonts/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf"
+dest_files=["res://.godot/imported/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf-11d6ec85c395558fd622d122d6299777.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true

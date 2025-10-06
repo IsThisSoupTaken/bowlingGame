@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de22qjjkkh6hi"
-path="res://.godot/imported/bowling_lane_rework.png-47acba4aa8bd2266ba9915a6944e4703.ctex"
+uid="uid://sh08ovmdqjcq"
+path="res://.godot/imported/bowl_button_unpressed.png-17b47e7083edc6fe0a3325ea9fe53a4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bowling_lane_rework.png"
-dest_files=["res://.godot/imported/bowling_lane_rework.png-47acba4aa8bd2266ba9915a6944e4703.ctex"]
+source_file="res://assets/images/bowl_button_unpressed.png"
+dest_files=["res://.godot/imported/bowl_button_unpressed.png-17b47e7083edc6fe0a3325ea9fe53a4d.ctex"]
 
 [params]
 

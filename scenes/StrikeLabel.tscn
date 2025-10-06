@@ -1,12 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://cgliu6uft2e5i"]
 
-[ext_resource type="FontFile" uid="uid://box4a5q2he2o8" path="res://assets/Chango-Regular.ttf" id="1_eq08n"]
+[ext_resource type="FontFile" uid="uid://dkc7k4o42ms5u" path="res://assets/fonts/BitcountGridDouble-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="1_4b5e4"]
 [ext_resource type="Script" uid="uid://bs4bsq76e6sp5" path="res://scripts/strike_text.gd" id="2_4b5e4"]
-[ext_resource type="Texture2D" uid="uid://bf6vvwk0e65u6" path="res://assets/bowlingpin_sideview_placeholder_alt_tiny.png" id="3_4b5e4"]
+[ext_resource type="Texture2D" uid="uid://bf6vvwk0e65u6" path="res://assets/images/bowlingpin_sideview_placeholder_alt_tiny.png" id="3_4b5e4"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vnq8c"]
 particle_flag_disable_z = true
-emission_shape_offset = Vector3(69, 30, 0)
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 inherit_velocity_ratio = 0.123
@@ -16,13 +15,15 @@ flatness = 0.148
 initial_velocity_min = 58.82
 initial_velocity_max = 335.28998
 gravity = Vector3(0, 98, 0)
+attractor_interaction_enabled = false
 
 [node name="StrikeLabel" type="RichTextLabel"]
+clip_contents = false
 offset_left = 280.0
-offset_top = 492.0
+offset_top = 595.0
 offset_right = 722.0
-offset_bottom = 646.0
-theme_override_fonts/normal_font = ExtResource("1_eq08n")
+offset_bottom = 774.0
+theme_override_fonts/normal_font = ExtResource("1_4b5e4")
 theme_override_font_sizes/normal_font_size = 75
 bbcode_enabled = true
 fit_content = true
@@ -30,18 +31,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("2_4b5e4")
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+show_behind_parent = true
+position = Vector2(230, 85)
+scale = Vector2(3.24, 3.04)
+amount = 3
+texture = ExtResource("3_4b5e4")
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_vnq8c")
+
 [node name="LabelShowTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 2.5
 one_shot = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-show_behind_parent = true
-scale = Vector2(3.24, 3.04)
-amount = 25
-texture = ExtResource("3_4b5e4")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_vnq8c")
+autostart = true
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="timeout" from="LabelShowTimer" to="." method="_on_label_show_timer_timeout"]
