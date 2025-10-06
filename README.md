@@ -1,4 +1,20 @@
-This is my first real git project so expect a lot of jank in all areas!
+v0.3 - Some base functionality for the "Clicker" game
+
+This update finally included some of the basics for the actual game I started making. It didn't
+occur to me when I started this project that I'm essentially making two games nested on top of each other, 
+but here we are. Now, if you get enough gutterballs, an option to buy the ability to control the curve of
+the ball appears, allowing for more control. I also made some small changes to the spare and strike animations
+based on some feedback.
+
+Next steps are to implement similar buying buttons for ball speed and ball starting location, then a few buttons
+to increase the points earned from pins, spares, and strikes. Then I need to create a start menu, a win condition,
+and a regular version of bowling with all the point functionality replaced with the classic 10-frames scoring.
+
+
+
+---------------------------------------------------------------------------
+
+v0.01 - This is my first real git project so expect a lot of jank in all areas!
 
 I made this little bowling game in Godot with the intent on turning it into a clicker game.
 The base bowling mechanics are fun enough to warrant seperating before I add the math clusterfuck.
