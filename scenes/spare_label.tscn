@@ -1,10 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://r8joo0grensh"]
 
-[ext_resource type="FontFile" uid="uid://box4a5q2he2o8" path="res://assets/fonts/Chango-Regular.ttf" id="1_jk5rp"]
+[ext_resource type="FontFile" uid="uid://b65gkv67v8lx5" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="1_jk5rp"]
 [ext_resource type="Script" uid="uid://c0jymhwx7bqe3" path="res://scripts/spare_text.gd" id="2_niwrd"]
 
 [node name="SpareLabel" type="RichTextLabel"]
-visible = false
 offset_left = 280.0
 offset_top = 492.0
 offset_right = 722.0

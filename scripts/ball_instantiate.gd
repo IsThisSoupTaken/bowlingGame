@@ -12,7 +12,10 @@ func add_ball():
 	ball_amt += 1
 	ScoreVariables.pin_struck = false
 	var new_ball = ball.instantiate()
-	new_ball.global_position = Vector2(randf_range(375, 580), randf_range(1075, 1200))
+	if ScoreVariables.start_pos_bought == true:
+		new_ball.global_position = Vector2(ScoreVariables.start_x, 1150)
+	else:
+		new_ball.global_position = Vector2(randf_range(375, 580), randf_range(1075, 1200))
 	new_ball.tree_exiting.connect(func(): ball_amt -= 1)
 	add_child(new_ball)
 

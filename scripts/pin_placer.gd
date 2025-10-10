@@ -26,7 +26,7 @@ func add_start_pins():
 	for child in get_children():
 		if child.get_child_count() == 0:
 			var new_pin = pin.instantiate()
-			new_pin.tree_exiting.connect(func(): ScoreVariables.score += 1)
+			new_pin.tree_exiting.connect(func(): ScoreVariables.score += (ScoreVariables.pin_point * ScoreVariables.pin_multi))
 			child.add_child(new_pin)
 
 # When the ball exits the scene, after the SetupTimer is finished it counts the pins

@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbs878l7jl3y2"]
+
+[ext_resource type="FontFile" uid="uid://vv2yv3s4h6yt" path="res://assets/fonts/Silkscreen-Regular.ttf" id="1_4u8js"]
+[ext_resource type="Script" uid="uid://k0b0o0qhqmwd" path="res://scripts/pin_point_control.gd" id="1_fjpj0"]
+[ext_resource type="StyleBox" uid="uid://dxl2vbtyf7mtf" path="res://assets/materials/slider_style_box.tres" id="2_od572"]
+[ext_resource type="Script" uid="uid://c3c5tt4oxjatm" path="res://scripts/point_buy_button.gd" id="4_1jva0"]
+[ext_resource type="StyleBox" uid="uid://ccpp3c7j0dqyg" path="res://assets/materials/slider_style_box_press.tres" id="4_6qs3s"]
+[ext_resource type="StyleBox" uid="uid://ceae2vnvjxohu" path="res://assets/materials/slider_style_box_hov.tres" id="5_xcbyp"]
+
+[node name="PinPointControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fjpj0")
+
+[node name="PointBuyButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 275.0
+offset_bottom = 75.0
+focus_mode = 0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_4u8js")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("2_od572")
+theme_override_styles/pressed = ExtResource("4_6qs3s")
+theme_override_styles/hover = ExtResource("5_xcbyp")
+autowrap_mode = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_1jva0")
+
+[connection signal="pressed" from="PointBuyButton" to="." method="_on_point_buy_button_pressed"]

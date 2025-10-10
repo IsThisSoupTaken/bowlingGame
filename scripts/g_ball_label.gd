@@ -1,8 +1,10 @@
 extends Label
 
-# Displays the gutterball score. Only displays after 10 total.
-func _process(_delta: float) -> void:
+func _ready() -> void:
 	$".".visible = false
-	if ScoreVariables.gutterballs >= 8:
+
+# Displays the gutterball score. Only displays after 5 total.
+func _process(_delta: float) -> void:
+	if ScoreVariables.gutterballs >= 5:
 		$".".visible = true
 	$".".text = "G-Balls\n-------\n" + str(ScoreVariables.gutterballs)
